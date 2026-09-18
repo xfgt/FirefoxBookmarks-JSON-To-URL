@@ -10,10 +10,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.FileTime;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 import java.util.concurrent.LinkedBlockingDeque;
 
 
@@ -133,6 +130,34 @@ public class Main {
     }
 
 
+    public static void parsingJsonSmall() throws IOException{
+
+        String filePath = "src/files_for_testing/1.json";
+        String jsonContent = new String(Files.readAllBytes(Paths.get(filePath))); // instead of while (line){}
+        // un-packaging process;
+        JSONObject jsonTextObj = new JSONObject(jsonContent.trim()); // get the raw data
+
+        System.out.println(jsonTextObj.getJSONObject("address")); // one nested object
+
+        // Source - https://stackoverflow.com/a/10593838
+        // Posted by Rickey, modified by community. See post 'Timeline' for change history
+        // Retrieved 2026-09-18, License - CC BY-SA 4.0
+        Iterator<String> keys = jsonTextObj.keys();
+        while(keys.hasNext()) {
+            String key = keys.next();
+            if (jsonTextObj.get(key) instanceof JSONObject) {
+                // do something with jsonObject here
+                System.out.println(jsonTextObj.getJSONObject(key));
+            } else if(jsonTextObj.get(key) instanceof JSONArray){
+                System.out.println(jsonTextObj.getJSONArray(key));
+            }
+        }
+
+
+        JSONArray ja1 = jsonTextObj.getJSONArray("phoneNumbers"); // one nested, but an array this time
+        System.out.println(ja1);
+
+    }
 
     public static void parsingJsonBig() throws IOException {
         String filePath = "src/files_for_testing/bigboss - copy.json";
@@ -167,7 +192,9 @@ public class Main {
             //basicJsonObjectFromString();
             //basicJsonArray();
 
-            parsingJsonBig();
+            parsingJsonSmall();
+
+            //parsingJsonBig();
 
 
             //dateTimeCustomFormatting();
