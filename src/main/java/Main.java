@@ -142,6 +142,8 @@ public class Main {
         // Source - https://stackoverflow.com/a/10593838
         // Posted by Rickey, modified by community. See post 'Timeline' for change history
         // Retrieved 2026-09-18, License - CC BY-SA 4.0
+
+        // ====GOLD======
         Iterator<String> keys = jsonTextObj.keys();
         while(keys.hasNext()) {
             String key = keys.next();
@@ -152,6 +154,48 @@ public class Main {
                 System.out.println(jsonTextObj.getJSONArray(key));
             }
         }
+        /*  TODO:
+                - implement as a recursive fucntion to iterate through every key which is
+                - either a JsonObject or a Json array;
+
+            TODO:
+                Structure
+                JSONObject has a 'children' JSON Array
+                Each JSON array has N JSON object (which can have also JSON arrays) (recursive nested types)
+
+            TODO:
+                 JSONObject
+                    JSONArray1
+                       JSONObject1
+                       JSONObject2
+                       JSONObjectN
+                    JSONArray2
+                       JSONObject1
+                       JSONObject2
+                       JSONObjectN
+                       .
+                       .
+                       .
+
+         */
+
+
+        /* TODO:
+            - make file
+                - get cerain keys
+                    - title
+                    - uri
+                    - dateAdded
+                        - epoch calc module to normal date
+                        - module for dateCreated in explorer exe manipulation change
+            - Recursive iteration for
+                - Children (json Array)
+                    - Each index (json object)
+                        - Get data, make file, go to the next
+
+         */
+
+
 
 
         JSONArray ja1 = jsonTextObj.getJSONArray("phoneNumbers"); // one nested, but an array this time

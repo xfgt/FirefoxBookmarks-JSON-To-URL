@@ -1,5 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 
@@ -20,12 +22,8 @@ public class fileReader {
                 System.out.println(line);
             }
 
-
-
-
-
-
-
+            String textContent = new String(Files.readAllBytes(Paths.get(filePath))); // instead of while (line){}
+            System.out.println("Option #2:\r\n" + textContent);
 
         } catch (Exception e ){
 
