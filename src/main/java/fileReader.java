@@ -8,16 +8,18 @@ public class fileReader {
         Scanner sc = new Scanner(System.in);
 
 
-        String base = "E:\\oldQ\\VMshared\\Github\\local_repos-notUploadedYet\\todo-Browser-Bookmarks\\json-to-url_java\\samples";
-        String filePath = base+"\\bigboss.json";
+
+        String filePath = "./src/files_for_testing/myUrl.url";
 
 
         try{
+            System.out.println(filePath);
             BufferedReader bufferedReader = new BufferedReader( new FileReader(filePath));
             String line;
             while((line = bufferedReader.readLine()) != null){
                 System.out.println(line);
             }
+
 
 
 

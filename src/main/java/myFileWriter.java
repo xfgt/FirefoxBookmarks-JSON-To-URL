@@ -7,19 +7,37 @@ public class myFileWriter {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String base = "E:\\oldQ\\VMshared\\Github\\local_repos-notUploadedYet\\todo-Browser-Bookmarks\\json-to-url_java\\samples";
+
 
         try{
 
-            FileWriter fileWriter = new FileWriter(base+"\\fileWriter3.txt");
-            fileWriter.write("asdfhlello! :D");
-            fileWriter.append("bisqwit");
-            fileWriter.append('c'+ System.lineSeparator()); // new line
-            fileWriter.write("amogus" + "\r\n");
+            {
+                FileWriter fileWriter = new FileWriter("fileWriter3.txt");
+                fileWriter.write("asdfhlello! :D");
+                fileWriter.append("bisqwit");
+                fileWriter.append('c' + System.lineSeparator()); // new line
+                fileWriter.write("amogus" + "\r\n");
 
-            fileWriter.write(fileWriter.getEncoding());
-            fileWriter.flush();
-            fileWriter.close();
+                fileWriter.write(fileWriter.getEncoding());
+                fileWriter.flush();
+                fileWriter.close();
+            }
+
+            {
+                FileWriter fileWriter = new FileWriter("myUrl.url");
+                fileWriter.write("[InternetShortcut]" + System.lineSeparator());
+                fileWriter.write("URL=https://youtube.com/" + System.lineSeparator());
+                fileWriter.write("Modified=20F06BA06D07BD014D");
+                /*
+                    // https://www.cyanwerks.com/formats/file-format-url.html#urlformat
+                    // https://ovanttasks.sourceforge.net/roxes-win32/chapter-.url-format.html
+
+                    The Modified field in a .url file uses a hexadecimal timestamp format that encodes a date and time, with the value 20F06BA06D07BD014D representing a specific moment tracked by Windows.
+                 */
+
+                fileWriter.flush();
+                fileWriter.close();
+            }
 
 
 
