@@ -2,22 +2,17 @@ import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.nio.file.attribute.FileTime;
 import java.util.Scanner;
 
 
 public class FileManipulator {
 
+    String _filePath;
+    String _textContent;
+    BufferedReader _bufferedReader;
+    FileWriter _fileWriter;
 
-    /*
-        Dedicated class for file operations
-     */
-
-    /*
-        File
-        Name
-        Other types included
-
-     */
 
     public static void example_read(){
 

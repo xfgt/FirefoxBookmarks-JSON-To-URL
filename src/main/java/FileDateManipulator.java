@@ -9,13 +9,16 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class FileDateManipulator {
+public class FileDateManipulator extends FileManipulator{
 
     /*
         Different module for reading and writing to a file and
         changing its date created and last modified based on the LocalDate (made from epoch value)
     */
 
+
+    BasicFileAttributes _basicFileAttributes;
+    FileTime _fileTime;
 
 
     public static void manipulateFileMetadata_read(){
