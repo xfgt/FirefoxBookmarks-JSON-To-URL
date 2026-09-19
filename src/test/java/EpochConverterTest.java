@@ -55,4 +55,21 @@ public class EpochConverterTest {
         assertEquals(localDateTime, epochConverter.get_localDateTimeNoNano());
     }
 
+
+    /*
+        TODO:
+            When done, polish it with cases for empty string and cover more cases of errors.
+            Introduce throw exceptions and some of that stuff;
+     */
+
+
+    @Test
+    void whenGivenEmptyStringEpoch(){
+        String sampleEpoch = "1780031858092000";
+        localDateTime = LocalDateTime.of(2026,5, 29, 8, 17, 38);
+        epochConverter = new EpochConverter("", sampleFormatPattern);
+        assertEquals(localDateTime.format(sampleFormat), epochConverter.get_localDateTimeFormatted());
+        assertEquals(localDateTime, epochConverter.get_localDateTimeNoNano());
+    }
+
 }
