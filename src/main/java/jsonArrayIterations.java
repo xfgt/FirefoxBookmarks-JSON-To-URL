@@ -33,7 +33,12 @@ public class jsonArrayIterations {
                         // Todo: json array, array list, index, map, contents
                         JSONObject childObject = childArray.getJSONObject(i);
                         String title = childObject.getString("title");
-                        System.out.println(title);
+                        Long dateAdded = childObject.getLong("dateAdded");
+                        Long dateLastModified = childObject.getLong("lastModified");
+                        String uri = childObject.getString("uri");
+
+                        System.out.printf("%s\n, %s\n, %s\n, %s\n",title, dateAdded, dateLastModified, uri);
+                        // construct an object
 
 
                     }

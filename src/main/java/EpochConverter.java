@@ -14,6 +14,7 @@ public class EpochConverter {
     ZoneId _zoneId;
     LocalDateTime _localDateTime;
 
+    // Accepting type String epoch value
     public EpochConverter(String dateTimeEpoch, String dateTimeFormatPattern){
         // epoch long to localdatetime
         // date added epoch to localdatetime with formatting
@@ -21,6 +22,22 @@ public class EpochConverter {
         // Todo: proverka validnost na string-a
         this._dateTimePattern = dateTimeFormatPattern;
         this._epochTimeMicroseconds = Long.valueOf(dateTimeEpoch); // From string to Long type; // "1733575953000000" ---> 1733575953000000L
+
+        //https://www.epochconverter.com/
+        this._instant = Instant.ofEpochMilli(_epochTimeMicroseconds/1000); // '/1000' because the original is 000-000 (microseconds)
+        this._zoneId = ZoneId.systemDefault();
+        this._localDateTime = this._instant.atZone(this._zoneId).toLocalDateTime();
+        this._dateTimeFormatter = DateTimeFormatter.ofPattern(dateTimeFormatPattern);
+
+    }
+    // accepting type Long epoch value
+    public EpochConverter(Long dateTimeEpoch, String dateTimeFormatPattern){
+        // epoch long to localdatetime
+        // date added epoch to localdatetime with formatting
+        // given value is in micro_seconds -> supported is milis
+        // Todo: proverka validnost na string-a
+        this._dateTimePattern = dateTimeFormatPattern;
+        this._epochTimeMicroseconds = dateTimeEpoch; // Long
 
         //https://www.epochconverter.com/
         this._instant = Instant.ofEpochMilli(_epochTimeMicroseconds/1000); // '/1000' because the original is 000-000 (microseconds)
