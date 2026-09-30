@@ -1,0 +1,24 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package SOLID.a_b_VideoManager.SOLID.I.TheProperApproach;
+
+/**
+ *
+ * @author xfgt
+ */
+public class PremiumVideo implements IVideoActions { // just video things
+    
+    ...
+
+    @Override
+    public double getNumberOfHoursPlayed() {
+        ....
+    }
+
+//    @Override // not applicable because we do not implement IAdsActions because it is a premium video
+//    public void playRandomAd() {
+//        ...
+//    }
+}
