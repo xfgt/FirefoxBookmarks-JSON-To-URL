@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: EpochConverterTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.067 s -- in EpochConverterTest
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.069 s <<< FAILURE! -- in EpochConverterTest
+EpochConverterTest.whenGivenEmptyStringEpoch -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Long.parseLong(Long.java:719)
+	at java.base/java.lang.Long.valueOf(Long.java:1157)
+	at EpochConverter.<init>(EpochConverter.java:24)
+	at EpochConverterTest.whenGivenEmptyStringEpoch(EpochConverterTest.java:70)
+

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="JSONTest" time="0.008" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="JSONTest" time="0.007" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,7 +16,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\LOCAL_ADMIN\AppData\Local\Temp\surefire2304216006843713357\surefirebooter-20260922210954580_3.jar C:\Users\LOCAL_ADMIN\AppData\Local\Temp\surefire2304216006843713357 2026-09-22T21-09-54_467-jvmRun1 surefire-20260922210954580_1tmp surefire_0-20260922210954580_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\LOCAL_ADMIN\AppData\Local\Temp\surefire8698252479037053095\surefirebooter-20261004173711373_3.jar C:\Users\LOCAL_ADMIN\AppData\Local\Temp\surefire8698252479037053095 2026-10-04T17-37-11_261-jvmRun1 surefire-20261004173711373_1tmp surefire_0-20261004173711373_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\LOCAL_ADMIN\eclipse-workspace\json-to-url\target\test-classes;C:\Users\LOCAL_ADMIN\eclipse-workspace\json-to-url\target\classes;C:\Users\LOCAL_ADMIN\.m2\repository\org\json\json\20260814\json-20260814.jar;C:\Users\LOCAL_ADMIN\.m2\repository\org\junit\jupiter\junit-jupiter\6.1.3\junit-jupiter-6.1.3.jar;C:\Users\LOCAL_ADMIN\.m2\repository\org\junit\jupiter\junit-jupiter-api\6.1.3\junit-jupiter-api-6.1.3.jar;C:\Users\LOCAL_ADMIN\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\LOCAL_ADMIN\.m2\repository\org\junit\platform\junit-platform-commons\6.1.3\junit-platform-commons-6.1.3.jar;C:\Users\LOCAL_ADMIN\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\LOCAL_ADMIN\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\LOCAL_ADMIN\.m2\repository\org\junit\jupiter\junit-jupiter-params\6.1.3\junit-jupiter-params-6.1.3.jar;C:\Users\LOCAL_ADMIN\.m2\repository\org\junit\jupiter\junit-jupiter-engine\6.1.3\junit-jupiter-engine-6.1.3.jar;C:\Users\LOCAL_ADMIN\.m2\repository\org\junit\platform\junit-platform-engine\6.1.3\junit-platform-engine-6.1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\LOCAL_ADMIN\AppData\Local\Temp\surefire2304216006843713357\surefirebooter-20260922210954580_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\LOCAL_ADMIN\AppData\Local\Temp\surefire8698252479037053095\surefirebooter-20261004173711373_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.9+7-LTS-338"/>
@@ -61,5 +61,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="givenJSON_whenParsed_thenCorrectValueReturned" classname="JSONTest" time="0.007"/>
+  <testcase name="givenJSON_whenParsed_thenCorrectValueReturned" classname="JSONTest" time="0.006"/>
 </testsuite>
