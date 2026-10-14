@@ -39,7 +39,7 @@ public class EpochConverter {
     public EpochConverter(String dateTimeEpoch, String dateTimeFormatPattern){
         this._dateTimePattern = dateTimeFormatPattern;
         this._epochTimeMicroseconds = Long.parseLong(dateTimeEpoch);                     
-        this._instant = Instant.ofEpochMilli(_epochTimeMicroseconds/1000); // microseconds
+        this._instant = Instant.ofEpochMilli(_epochTimeMicroseconds/1000); // microseconds  
         this._zoneId = ZoneId.systemDefault();
         this._localDateTime = this._instant.atZone(this._zoneId).toLocalDateTime();
         this._dateTimeFormatter = DateTimeFormatter.ofPattern(dateTimeFormatPattern);

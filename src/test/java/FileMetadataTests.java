@@ -31,12 +31,11 @@ public class FileMetadataTests {
     
 
         /**
-         * @param args the command line arguments
          * @throws java.io.FileNotFoundException
          */
 
     @Test
-    public void asdf(){
+    public void asdf() throws IOException {
         // TODO code application logic here
             System.out.println("здравей");
             // -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 
